@@ -11,7 +11,17 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d9303cd0-7f6c-4d41-b51d-f773d1eebd90" name="Changes" comment="c++ bubble" />
+    <list default="true" id="d9303cd0-7f6c-4d41-b51d-f773d1eebd90" name="Changes" comment="c++ remove redundant return in bubble">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/c__.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/c__.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/c__.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/c__.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/c__.dir/sorts.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/c__.dir/sorts.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/c__" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/c__" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sorts.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/sorts.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sorts.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/sorts.hpp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -66,7 +76,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1637290997955</updated>
-      <workItem from="1637291000085" duration="3618000" />
+      <workItem from="1637291000085" duration="4449000" />
     </task>
     <task id="LOCAL-00001" summary="c++ sort init">
       <created>1637291363895</created>
@@ -82,7 +92,21 @@
       <option name="project" value="LOCAL" />
       <updated>1637294407537</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="c++ clion stuff">
+      <created>1637294631889</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1637294631889</updated>
+    </task>
+    <task id="LOCAL-00004" summary="c++ remove redundant return in bubble">
+      <created>1637295026056</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1637295026056</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -102,6 +126,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="c++ sort init" />
     <MESSAGE value="c++ bubble" />
-    <option name="LAST_COMMIT_MESSAGE" value="c++ bubble" />
+    <MESSAGE value="c++ clion stuff" />
+    <MESSAGE value="c++ remove redundant return in bubble" />
+    <option name="LAST_COMMIT_MESSAGE" value="c++ remove redundant return in bubble" />
   </component>
 </project>

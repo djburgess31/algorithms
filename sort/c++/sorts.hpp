@@ -6,7 +6,7 @@ namespace sorts {
         sortArray(int size, int *arr);
         void bubble();
         void bubble(int length);
-        int * insertion();
+        void insertion();
 
     private:
         int size;
