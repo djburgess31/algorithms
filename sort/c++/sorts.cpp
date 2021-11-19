@@ -46,5 +46,21 @@ namespace sorts {
             ptr++;
         }
     }
+
+    void sortArray::selection() {
+        int *min = arr;
+
+        for (int i=0; i<size-1; i++) {
+            for (int j=1; j<size-i; j++) {
+                if (*(arr+i + j) < *min) {
+                    min = arr+i+j;
+                }
+            }
+            if (arr+i != min) {
+                swap(arr+i, min);
+            }
+            min = arr+i+1;
+        }
+    }
 }
 
