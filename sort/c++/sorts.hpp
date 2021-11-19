@@ -4,8 +4,9 @@ namespace sorts {
     class sortArray {
     public:
         sortArray(int size, int *arr);
-        int * bubble();
-        int * bubble(int length);
+        void bubble();
+        void bubble(int length);
+        int * insertion();
 
     private:
         int size;
