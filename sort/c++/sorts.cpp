@@ -1,7 +1,14 @@
 #include "sorts.hpp"
+#include <iostream>
 
 namespace sorts {
     sortArray::sortArray(int size, int *arr) : size(size), arr(arr){}
+
+    void swap(int *ptr1, int *ptr2) {
+        *ptr1 = *ptr1 + *(ptr2);
+        *(ptr2) = *ptr1 - *(ptr2);
+        *ptr1 = *ptr1 - *(ptr2);
+    }
 
     void sortArray::bubble() {
         bubble(size);
@@ -14,9 +21,7 @@ namespace sorts {
         int *ptr = arr;
         for (int i=0; i<size-1; i++) {
             if(*ptr > *(ptr+1)) {
-                *ptr = *ptr + *(ptr+1);
-                *(ptr+1) = *ptr - *(ptr+1);
-                *ptr = *ptr - *(ptr+1);
+                swap(ptr, ptr+1);
             }
             ptr++;
         }
@@ -26,11 +31,17 @@ namespace sorts {
     void sortArray::insertion() {
         int *ptr = arr;
 
-        for (int i=0; i<size; i++) {
+        for (int i=0; i<size-1; i++) {
             if(*ptr > *(ptr+1)) {
-                *ptr = *ptr + *(ptr+1);
-                *(ptr+1) = *ptr - *(ptr+1);
-                *ptr = *ptr - *(ptr+1);
+                swap(ptr, ptr+1);
+                for (int j=0; j<i; j++){
+                    if (*(ptr-j) < *(ptr-1-j)) {
+                        swap(ptr-j, ptr-1-j);
+                    }
+                    else {
+                        break;
+                    }
+                }
             }
             ptr++;
         }
