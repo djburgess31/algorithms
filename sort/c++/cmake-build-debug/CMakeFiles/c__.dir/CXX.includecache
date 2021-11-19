@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/djburgess/Documents/Programming/Algorithms/sort/c++/sorts.cpp
+sorts.hpp
+/home/djburgess/Documents/Programming/Algorithms/sort/c++/sorts.hpp
+
+/home/djburgess/Documents/Programming/Algorithms/sort/c++/sorts.hpp
+
