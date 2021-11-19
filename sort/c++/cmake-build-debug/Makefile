@@ -169,6 +169,33 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/c__.dir/build.make CMakeFiles/c__.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+sorts.o: sorts.cpp.o
+
+.PHONY : sorts.o
+
+# target to build an object file
+sorts.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/c__.dir/build.make CMakeFiles/c__.dir/sorts.cpp.o
+.PHONY : sorts.cpp.o
+
+sorts.i: sorts.cpp.i
+
+.PHONY : sorts.i
+
+# target to preprocess a source file
+sorts.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/c__.dir/build.make CMakeFiles/c__.dir/sorts.cpp.i
+.PHONY : sorts.cpp.i
+
+sorts.s: sorts.cpp.s
+
+.PHONY : sorts.s
+
+# target to generate assembly for a file
+sorts.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/c__.dir/build.make CMakeFiles/c__.dir/sorts.cpp.s
+.PHONY : sorts.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -181,6 +208,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... sorts.o"
+	@echo "... sorts.i"
+	@echo "... sorts.s"
 .PHONY : help
 
 

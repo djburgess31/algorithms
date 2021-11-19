@@ -1,8 +1,14 @@
-//
-// Created by djburgess on 19/11/2021.
-//
+#pragma once
 
-#ifndef C___SORTS_HPP
-#define C___SORTS_HPP
+namespace sorts {
+    class sortArray {
+    public:
+        sortArray(int size, int *arr);
+        int * bubble();
+        int * bubble(int length);
 
-#endif //C___SORTS_HPP
+    private:
+        int size;
+        int *arr;
+    };
+}

@@ -85,6 +85,9 @@
 		<Unit filename="/home/djburgess/Documents/Programming/Algorithms/sort/c++/main.cpp">
 			<Option target="c__"/>
 		</Unit>
+		<Unit filename="/home/djburgess/Documents/Programming/Algorithms/sort/c++/sorts.cpp">
+			<Option target="c__"/>
+		</Unit>
 		<Unit filename="/home/djburgess/Documents/Programming/Algorithms/sort/c++/sorts.hpp">
 			<Option target="c__"/>
 		</Unit>
