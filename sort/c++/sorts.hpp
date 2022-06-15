@@ -1,9 +1,14 @@
 #pragma once
+#include <SDL2/SDL.h>
 
 namespace sorts {
-    class sortArray {
+    class sort {
     public:
-        sortArray(int size, int *arr);
+        sort(int size, int *arr, int width, int height);
+        ~sort();
+        void init(int size, int *arr);
+        void update();
+        void swap(int *ptr1, int *ptr2);
         void bubble();
         void bubble(int length);
         void insertion();
@@ -12,5 +17,11 @@ namespace sorts {
     private:
         int size;
         int *arr;
+        int height;
+        int width;
+        SDL_Renderer *renderer{};
+        SDL_Window *window{};
+        float barWidth;
+        float barHeight;
     };
 }
