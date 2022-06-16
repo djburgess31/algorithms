@@ -1,4 +1,4 @@
 # Algorithms
 
 ## Sorts
-<img src="./sort.gif" alt="sort gif" width="1280" height="720">
+<img src="./sort.gif" alt="sort gif" width="720" height="480">
