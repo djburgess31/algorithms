@@ -22,7 +22,8 @@ namespace sorts {
         //bubble();
         //insertion();
         //shell();
-        selection();
+        //selection();
+        quicksort();
 
         SDL_Event event;
         while (event.type != SDL_QUIT) {
@@ -111,10 +112,11 @@ namespace sorts {
     }
 
     void sort::selection() {
+        int i, j;
         int *min = &arr[0];
 
-        for (int i=0; i<size-1; i++) {
-            for (int j=1; j<size-i; j++) {
+        for (i=0; i<size-1; i++) {
+            for (j=1; j<size-i; j++) {
                 if (arr[i + j] < *min) {
                     min = &arr[i+j];
                 }
@@ -123,6 +125,33 @@ namespace sorts {
                 swap(&arr[i], min);
             }
             min = &arr[i+1];
+        }
+    }
+
+    void sort::quicksort() {
+        quicksort(0, size-1);
+    }
+
+    void sort::quicksort(int lo, int hi) {
+        int p;
+        if (lo >= 0 && hi >= 0 && lo <hi) {
+            p = hoarePartition(lo, hi);
+            quicksort(lo, p);
+            quicksort(p+1, hi);
+        }
+    }
+
+    int sort::hoarePartition(int lo, int hi) {
+        int p = arr[(hi+lo)/2];
+        int i = lo-1;
+        int j = hi+1;
+
+        while (true) {
+            do i++; while (arr[i] < p);
+            do j--; while (arr[j] > p);
+
+            if (i >= j) return j;
+            swap(&arr[i], &arr[j]);
         }
     }
 }

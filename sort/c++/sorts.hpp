@@ -14,6 +14,9 @@ namespace sorts {
         void insertion();
         void shell();
         void selection();
+        void quicksort();
+        void quicksort(int lo, int hi);
+        int hoarePartition(int lo, int hi);
 
     private:
         int size;

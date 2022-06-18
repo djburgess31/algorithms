@@ -12,6 +12,11 @@ int main() {
     }
 
     sorts::sort sort(s, arr, 1600, 900);
+
+    std::cout<<"\n";
+    for (int j=0; j<s; j++) {
+        std::cout<<arr[j]<<" ";
+    }
     return 0;
 }
 
