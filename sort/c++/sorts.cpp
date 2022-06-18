@@ -21,8 +21,8 @@ namespace sorts {
         update();
         //bubble();
         //insertion();
-        shell();
-        //selection();
+        //shell();
+        selection();
 
         SDL_Event event;
         while (event.type != SDL_QUIT) {
@@ -66,40 +66,29 @@ namespace sorts {
     }
 
     void sort::bubble() {
-        return bubble(size);
-    }
-
-    void sort::bubble(int length) {
-        if (length < 2) {
-            return;
-        }
-        int *ptr = arr;
-        for (int i=0; i<length-1; i++) {
-            if(*ptr > *(ptr+1)) {
-                swap(ptr, ptr+1);
+        int nn, i, n = size;
+        while (n > 1) {
+            nn = 0;
+            for (i = 1; i <= n-1; i++) {
+                if (arr[i-1] > arr[i]) {
+                    swap(&arr[i-1], &arr[i]);
+                    nn = i;
+                }
             }
-            ptr++;
+            n = nn;
         }
-        update();
-        return bubble(length-1);
     }
 
     void sort::insertion() {
-        int *ptr = arr;
-
-        for (int i=0; i<size-1; i++) {
-            if(*ptr > *(ptr+1)) {
-                swap(ptr, ptr+1);
-                for (int j=0; j<i; j++){
-                    if (*(ptr-j) < *(ptr-1-j)) {
-                        swap(ptr-j, ptr-1-j);
-                    }
-                    else {
-                        break;
-                    }
-                }
+        int j, x;
+        for (int i=1; i<size; i++) {
+            x = arr[i];
+            for (j=i-1; j>=0 && arr[j] > x; j--) {
+                arr[j+1] = arr[j];
+                update();
             }
-            ptr++;
+            arr[j+1] = x;
+            update();
         }
     }
 
@@ -122,18 +111,18 @@ namespace sorts {
     }
 
     void sort::selection() {
-        int *min = arr;
+        int *min = &arr[0];
 
         for (int i=0; i<size-1; i++) {
             for (int j=1; j<size-i; j++) {
-                if (*(arr+i + j) < *min) {
-                    min = arr+i+j;
+                if (arr[i + j] < *min) {
+                    min = &arr[i+j];
                 }
             }
-            if (arr+i != min) {
-                swap(arr+i, min);
+            if (arr[i] != *min) {
+                swap(&arr[i], min);
             }
-            min = arr+i+1;
+            min = &arr[i+1];
         }
     }
 }
