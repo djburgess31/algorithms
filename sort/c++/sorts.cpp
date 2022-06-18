@@ -20,7 +20,8 @@ namespace sorts {
 
         update();
         //bubble();
-        insertion();
+        //insertion();
+        shell();
         //selection();
 
         SDL_Event event;
@@ -37,7 +38,7 @@ namespace sorts {
     }
 
     void sort::update() {
-        SDL_Delay(10);
+        SDL_Delay(25);
 
         SDL_SetRenderDrawColor(renderer, 255, 255, 255, 0);
         SDL_RenderClear(renderer);
@@ -65,7 +66,7 @@ namespace sorts {
     }
 
     void sort::bubble() {
-        bubble(size);
+        return bubble(size);
     }
 
     void sort::bubble(int length) {
@@ -73,7 +74,7 @@ namespace sorts {
             return;
         }
         int *ptr = arr;
-        for (int i=0; i<size-1; i++) {
+        for (int i=0; i<length-1; i++) {
             if(*ptr > *(ptr+1)) {
                 swap(ptr, ptr+1);
             }
@@ -99,6 +100,24 @@ namespace sorts {
                 }
             }
             ptr++;
+        }
+    }
+
+    void sort::shell() {
+        int gaps[] = {50, 25, 12, 6, 3, 1};
+
+        for (int gap : gaps) {
+            for (int j=gap; j<size; j++) {
+                int tmp = arr[j];
+
+                int k;
+                for (k=j; k >= gap && arr[k-gap] > tmp; k-=gap) {
+                    arr[k] = arr[k-gap];
+                    update();
+                }
+                arr[k] = tmp;
+
+            }
         }
     }
 

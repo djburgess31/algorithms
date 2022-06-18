@@ -12,6 +12,7 @@ namespace sorts {
         void bubble();
         void bubble(int length);
         void insertion();
+        void shell();
         void selection();
 
     private:
